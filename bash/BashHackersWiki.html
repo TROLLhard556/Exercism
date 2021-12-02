@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr" class="no-js">
+<head>
+    <meta charset="UTF-8" />
+    <title>The Bash Hackers Wiki [Bash Hackers Wiki]</title>
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="shortcut icon" href="/lib/tpl/bootstrap3/images/favicon.ico" />
+<link rel="apple-touch-icon" href="/lib/tpl/bootstrap3/images/apple-touch-icon.png" />
+<meta name="generator" content="DokuWiki"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="start,bash,shell,linux,scripting"/>
+<link type="text/css" rel="stylesheet" href="/lib/tpl/bootstrap3/assets/bootstrap/default/bootstrap.min.css"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/lib/exe/opensearch.php" title="Bash Hackers Wiki"/>
+<link rel="start" href="/"/>
+<link rel="contents" href="/start?do=index" title="Sitemap"/>
+<link rel="manifest" href="/lib/exe/manifest.php"/>
+<link rel="alternate" type="application/rss+xml" title="Recent Changes" href="/feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Current namespace" href="/feed.php?mode=list&amp;ns="/>
+<link rel="alternate" type="text/html" title="Plain HTML" href="/_export/xhtml/start"/>
+<link rel="alternate" type="text/plain" title="Wiki Markup" href="/_export/raw/start"/>
+<link rel="canonical" href="https://wiki.bash-hackers.org/"/>
+<link rel="stylesheet" type="text/css" href="/lib/exe/css.php?t=bootstrap3&amp;tseed=54923c3deda180f2db5bd755cd8fbf1a"/>
+<!--[if gte IE 9]><!-->
+<script type="text/javascript">/*<![CDATA[*/var NS='';var JSINFO = {"updatable":1,"userreplace":1,"default_macro_string":"","plugins":{"edittable":{"default columnwidth":""}},"move_renameokay":false,"isadmin":0,"isauth":0,"bootstrap3":{"mode":"show","toc":[],"config":{"collapsibleSections":0,"fixedTopNavbar":1,"showSemanticPopup":0,"sidebarOnNavbar":0,"tagsOnTop":1,"tocAffix":1,"tocCollapseOnScroll":1,"tocCollapsed":0,"tocLayout":"default","useAnchorJS":1,"useAlternativeToolbarIcons":1}},"id":"start","namespace":"","ACT":"show","useHeadingNavigation":1,"useHeadingContent":1};
+/*!]]>*/</script>
+<script type="text/javascript" charset="utf-8" src="/lib/exe/jquery.php?tseed=23f888679b4f1dc26eef34902aca964f"></script>
+<script type="text/javascript" charset="utf-8" src="/lib/exe/js.php?t=bootstrap3&amp;tseed=54923c3deda180f2db5bd755cd8fbf1a"></script>
+<script type="text/javascript">/*<![CDATA[*/if (typeof IconifyConfig == 'undefined') { var IconifyConfig = { 'defaultAPI' : '/lib/tpl/bootstrap3/iconify.php?prefix={prefix}&icons={icons}' } }
+/*!]]>*/</script>
+<script type="text/javascript" src="/lib/tpl/bootstrap3/assets/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/lib/tpl/bootstrap3/assets/anchorjs/anchor.min.js"></script>
+<script type="text/javascript" src="/lib/tpl/bootstrap3/assets/typeahead/bootstrap3-typeahead.min.js"></script>
+<script type="text/javascript" src="/lib/tpl/bootstrap3/assets/iconify/iconify.min.js"></script>
+<script type="text/javascript" src="/lib/tpl/bootstrap3/assets/iconify/plugins/fa.js"></script>
+<!--<![endif]-->
+<style type="text/css">@media screen { body { margin-top: 65px; }  #dw__toc.affix { top: 55px; position: fixed !important; }  #dw__toc .nav .nav .nav { display: none; } }</style>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script type="text/javascript" src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="default dokuwiki mode_show tpl_bootstrap3   home dw-page-on-panel dw-fluid-container" data-page-id="start"><div class="dokuwiki">
+    <header id="dokuwiki__header" class="dw-container dokuwiki container-fluid mx-5">
+    <!-- navbar -->
+<nav id="dw__navbar" class="navbar navbar-fixed-top navbar-default" role="navigation">
+
+    <div class="dw-container container-fluid mx-5">
+
+        <div class="navbar-header">
+
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a class="navbar-brand d-flex align-items-center" href="/start" accesskey="h" title="Bash Hackers Wiki"><img id="dw__logo" class="pull-left h-100 mr-4" alt="Bash Hackers Wiki" src="/lib/tpl/bootstrap3/images/logo.png" /><div class="pull-right"><div id="dw__title">Bash Hackers Wiki</div></div></a>
+        </div>
+
+        <div class="collapse navbar-collapse">
+
+            
+            
+            
+            <div class="navbar-right" id="dw__navbar_items">
+
+                
+<!-- navbar-searchform -->
+<form action="/start" accept-charset="utf-8" class="navbar-form navbar-left search" id="dw__search" method="get" role="search">
+    <div class="input-group">
+        <input id="qsearch" autocomplete="off" type="search" placeholder="Search" value="" accesskey="f" name="q" class="form-control" title="[F]" />
+        <div class="input-group-btn">
+            <button  class="btn btn-default" type="submit" title="Search">
+                <span class="iconify"  data-icon="mdi:magnify"></span>            </button>
+        </div>
+
+    </div>
+    <input type="hidden" name="do" value="search" />
+</form>
+<!-- /navbar-searchform -->
+<!-- tools-menu -->
+<ul class="nav navbar-nav dw-action-icon" id="dw__tools">
+
+    
+    <li class="dropdown">
+
+        <a href="" class="dropdown-toggle" data-target="#" data-toggle="dropdown" title="" role="button" aria-haspopup="true" aria-expanded="false">
+            <span class="iconify"  data-icon="mdi:wrench"></span> <span class="hidden-lg hidden-md hidden-sm">Tools</span> <span class="caret"></span>
+        </a>
+
+        <ul class="dropdown-menu tools" role="menu">
+        
+            <li class="dropdown-header">
+                <span class="iconify"  data-icon="mdi:account"></span> User Tools            </li>
+
+            <li class="action"><a href="/start?do=register" title="Register" rel="nofollow" class="menuitem register"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M15 14c-2.67 0-8 1.33-8 4v2h16v-2c0-2.67-5.33-4-8-4m-9-4V7H4v3H1v2h3v3h2v-3h3v-2m6 2a4 4 0 0 0 4-4 4 4 0 0 0-4-4 4 4 0 0 0-4 4 4 4 0 0 0 4 4z"/></svg><span>Register</span></a></li><li class="action"><a href="/start?do=login&amp;sectok=" title="Log In" rel="nofollow" class="menuitem login"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 17.25V14H3v-4h7V6.75L15.25 12 10 17.25M8 2h9a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-4h2v4h9V4H8v4H6V4a2 2 0 0 1 2-2z"/></svg><span>Log In</span></a></li>
+                        <li class="divider" role="separator"></li>
+            
+        
+            <li class="dropdown-header">
+                <span class="iconify"  data-icon="mdi:toolbox"></span> Site Tools            </li>
+
+            <li class="action"><a href="/start?do=recent" title="Recent Changes [r]" rel="nofollow" accesskey="r" class="menuitem recent"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M15 13h1.5v2.82l2.44 1.41-.75 1.3L15 16.69V13m4-5H5v11h4.67c-.43-.91-.67-1.93-.67-3a7 7 0 0 1 7-7c1.07 0 2.09.24 3 .67V8M5 21a2 2 0 0 1-2-2V5c0-1.11.89-2 2-2h1V1h2v2h8V1h2v2h1a2 2 0 0 1 2 2v6.1c1.24 1.26 2 2.99 2 4.9a7 7 0 0 1-7 7c-1.91 0-3.64-.76-4.9-2H5m11-9.85A4.85 4.85 0 0 0 11.15 16c0 2.68 2.17 4.85 4.85 4.85A4.85 4.85 0 0 0 20.85 16c0-2.68-2.17-4.85-4.85-4.85z"/></svg><span>Recent Changes</span></a></li><li class="action"><a href="/start?do=media&amp;ns=" title="Media Manager" rel="nofollow" class="menuitem media"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M7 15l4.5-6 3.5 4.5 2.5-3L21 15m1-11h-8l-2-2H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2M2 6H0v14a2 2 0 0 0 2 2h18v-2H2V6z"/></svg><span>Media Manager</span></a></li><li class="action"><a href="/start?do=index" title="Sitemap [x]" rel="nofollow" accesskey="x" class="menuitem index"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M3 3h6v4H3V3m12 7h6v4h-6v-4m0 7h6v4h-6v-4m-2-4H7v5h6v2H5V9h2v2h6v2z"/></svg><span>Sitemap</span></a></li>
+                        <li class="divider" role="separator"></li>
+            
+        
+            <li class="dropdown-header">
+                <span class="iconify"  data-icon="mdi:file-document-outline"></span> Page Tools            </li>
+
+            <li class="action"><a href="/start?do=edit" title="Show pagesource [v]" rel="nofollow" accesskey="v" class="menuitem source"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13 9h5.5L13 3.5V9M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2m.12 13.5l3.74 3.74 1.42-1.41-2.33-2.33 2.33-2.33-1.42-1.41-3.74 3.74m11.16 0l-3.74-3.74-1.42 1.41 2.33 2.33-2.33 2.33 1.42 1.41 3.74-3.74z"/></svg><span>Show pagesource</span></a></li><li class="action"><a href="/start?do=revisions" title="Old revisions [o]" rel="nofollow" accesskey="o" class="menuitem revs"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M11 7v5.11l4.71 2.79.79-1.28-4-2.37V7m0-5C8.97 2 5.91 3.92 4.27 6.77L2 4.5V11h6.5L5.75 8.25C6.96 5.73 9.5 4 12.5 4a7.5 7.5 0 0 1 7.5 7.5 7.5 7.5 0 0 1-7.5 7.5c-3.27 0-6.03-2.09-7.06-5h-2.1c1.1 4.03 4.77 7 9.16 7 5.24 0 9.5-4.25 9.5-9.5A9.5 9.5 0 0 0 12.5 2z"/></svg><span>Old revisions</span></a></li><li class="action"><a href="/start?do=backlink" title="Backlinks" rel="nofollow" class="menuitem backlink"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10.59 13.41c.41.39.41 1.03 0 1.42-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0 5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.982 2.982 0 0 0 0-4.24 2.982 2.982 0 0 0-4.24 0l-3.53 3.53a2.982 2.982 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0 5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.982 2.982 0 0 0 0 4.24 2.982 2.982 0 0 0 4.24 0l3.53-3.53a2.982 2.982 0 0 0 0-4.24.973.973 0 0 1 0-1.42z"/></svg><span>Backlinks</span></a></li><li class="action"><a href="#dokuwiki__top" title="Back to top [t]" rel="nofollow" accesskey="t" class="menuitem top"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg><span>Back to top</span></a></li>
+            
+                </ul>
+    </li>
+
+    
+</ul>
+<!-- /tools-menu -->
+
+                <ul class="nav navbar-nav">
+
+                    
+                                        <li>
+                        <span class="dw__actions dw-action-icon">
+                        <a href="/start?do=register" title="Register" rel="nofollow" class="menuitem register btn btn-success navbar-btn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M15 14c-2.67 0-8 1.33-8 4v2h16v-2c0-2.67-5.33-4-8-4m-9-4V7H4v3H1v2h3v3h2v-3h3v-2m6 2a4 4 0 0 0 4-4 4 4 0 0 0-4-4 4 4 0 0 0-4 4 4 4 0 0 0 4 4z"/></svg><span class=""> Register</span></a><a href="/start?do=login&amp;sectok=" title="Log In" rel="nofollow" class="menuitem login btn btn-default navbar-btn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 17.25V14H3v-4h7V6.75L15.25 12 10 17.25M8 2h9a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-4h2v4h9V4H8v4H6V4a2 2 0 0 1 2-2z"/></svg><span class=""> Log In</span></a>                        </span>
+                    </li>
+                    
+                </ul>
+
+                
+                
+
+            </div>
+
+        </div>
+    </div>
+</nav>
+<!-- navbar -->
+<div align="center">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- BHORG_BOTTOM -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-4658830517838678"
+     data-ad-slot="1603598940"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+    </header>
+
+    <a name="dokuwiki__top" id="dokuwiki__top"></a>
+
+    <main role="main" class="dw-container pb-5 dokuwiki container-fluid mx-5">
+
+        <div id="dokuwiki__pageheader">
+
+            
+            <!-- breadcrumbs -->
+<nav id="dw__breadcrumbs" class="small">
+
+    <hr/>
+
+        <div class="dw__youarehere">
+        <ol class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList"><li>You are here</li><li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="/start"   itemprop="item" title="start"><span itemprop="name"><span class="iconify"  data-icon="mdi:home"></span></span></a></li></ol>    </div>
+    
+        <div class="dw__breadcrumbs hidden-print">
+        <ol class="breadcrumb"><li>Trace</li><li class="active"><a href="/start"  title="start">The Bash Hackers Wiki</a></li></ol>    </div>
+    
+    <hr/>
+
+</nav>
+<!-- /breadcrumbs -->
+
+            <p class="text-right">
+                <span class="pageId ml-1 label label-primary">start</span>            </p>
+
+            <div id="dw__msgarea" class="small">
+                            </div>
+
+        </div>
+
+        <div class="row">
+
+            
+            <article id="dokuwiki__content" class="col-sm-12 col-md-12 " itemscope itemtype="http://schema.org/Article" itemref="dw__license">
+
+                
+<!-- page-tools -->
+<nav id="dw__pagetools" class="hidden-print">
+    <div class="tools panel panel-default">
+        <ul class="nav nav-stacked nav-pills text-muted">
+            <li class="action"><a href="/start?do=edit" title="Show pagesource [v]" rel="nofollow" accesskey="v" class="menuitem source"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13 9h5.5L13 3.5V9M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2m.12 13.5l3.74 3.74 1.42-1.41-2.33-2.33 2.33-2.33-1.42-1.41-3.74 3.74m11.16 0l-3.74-3.74-1.42 1.41 2.33 2.33-2.33 2.33 1.42 1.41 3.74-3.74z"/></svg><span>Show pagesource</span></a></li><li class="action"><a href="/start?do=revisions" title="Old revisions [o]" rel="nofollow" accesskey="o" class="menuitem revs"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M11 7v5.11l4.71 2.79.79-1.28-4-2.37V7m0-5C8.97 2 5.91 3.92 4.27 6.77L2 4.5V11h6.5L5.75 8.25C6.96 5.73 9.5 4 12.5 4a7.5 7.5 0 0 1 7.5 7.5 7.5 7.5 0 0 1-7.5 7.5c-3.27 0-6.03-2.09-7.06-5h-2.1c1.1 4.03 4.77 7 9.16 7 5.24 0 9.5-4.25 9.5-9.5A9.5 9.5 0 0 0 12.5 2z"/></svg><span>Old revisions</span></a></li><li class="action"><a href="/start?do=backlink" title="Backlinks" rel="nofollow" class="menuitem backlink"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10.59 13.41c.41.39.41 1.03 0 1.42-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0 5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.982 2.982 0 0 0 0-4.24 2.982 2.982 0 0 0-4.24 0l-3.53 3.53a2.982 2.982 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0 5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.982 2.982 0 0 0 0 4.24 2.982 2.982 0 0 0 4.24 0l3.53-3.53a2.982 2.982 0 0 0 0-4.24.973.973 0 0 1 0-1.42z"/></svg><span>Backlinks</span></a></li><li class="action"><a href="#dokuwiki__top" title="Back to top [t]" rel="nofollow" accesskey="t" class="menuitem top"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg><span>Back to top</span></a></li>        </ul>
+    </div>
+</nav>
+<!-- /page-tools -->
+
+                <div class="panel panel-default px-3 py-2" itemprop="articleBody">
+                    <div class="page panel-body">
+
+                        <!-- page-icons -->
+<div class="dw-page-icons pull-right hidden-print">
+    <ul class="list-inline">
+    <li class="shareon dropdown"><a href="#" title="Share via" rel="nofollow" data-toggle="dropdown" data-remote="/start" data-target="#" aria-haspopup="true" aria-expanded="true" class="menuitem dropdown-toggle shareon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="mdi-share-variant" width="24" height="24" viewBox="0 0 24 24"><path d="M18,16.08C17.24,16.08 16.56,16.38 16.04,16.85L8.91,12.7C8.96,12.47 9,12.24 9,12C9,11.76 8.96,11.53 8.91,11.3L15.96,7.19C16.5,7.69 17.21,8 18,8C19.66,8 21,6.66 21,5C21,3.34 19.66,2 18,2C16.34,2 15,3.34 15,5C15,5.24 15.04,5.47 15.09,5.7L8.04,9.81C7.5,9.31 6.79,9 6,9C4.34,9 3,10.34 3,12C3,13.66 4.34,15 6,15C6.79,15 7.5,14.69 8.04,14.19L15.16,18.34C15.11,18.55 15.08,18.77 15.08,19C15.08,20.61 16.39,21.91 18,21.91C19.61,21.91 20.92,20.61 20.92,19C20.92,17.39 19.61,16.08 18,16.08Z" /></svg><span>Share via</span></a><ul class="dropdown-menu"><li class="dropdown-header"><span class="iconify"  data-icon="mdi:share-variant"></span> Share via...</li><li><a href="#" class="share share-twitter" title="Share via Twitter"><span class="iconify"  data-icon="mdi:twitter"></span> Twitter</a></li><li><a href="#" class="share share-linkedin" title="Share via LinkedIn"><span class="iconify"  data-icon="mdi:linkedin"></span> LinkedIn</a></li><li><a href="#" class="share share-facebook" title="Share via Facebook"><span class="iconify"  data-icon="mdi:facebook"></span> Facebook</a></li><li><a href="#" class="share share-pinterest" title="Share via Pinterest"><span class="iconify"  data-icon="mdi:pinterest"></span> Pinterest</a></li><li><a href="#" class="share share-telegram" title="Share via Telegram"><span class="iconify"  data-icon="mdi:telegram"></span> Telegram</a></li><li><a href="#" class="share share-whatsapp" title="Share via WhatsApp"><span class="iconify"  data-icon="mdi:whatsapp"></span> WhatsApp</a></li><li><a href="#" class="share share-yammer" title="Share via Yammer"><span class="iconify"  data-icon="mdi:yammer"></span> Yammer</a></li><li><a href="#" class="share share-reddit" title="Share via Reddit"><span class="iconify"  data-icon="mdi:reddit"></span> Reddit</a></li></ul></li><li class="feed"><a href="https://wiki.bash-hackers.org/feed.php?ns=" title="Recent Changes" rel="nofollow" target="_blank" class="menuitem feed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="mdi-rss" width="24" height="24" viewBox="0 0 24 24"><path d="M6.18,15.64C7.38,15.64 8.36,16.62 8.36,17.82C8.36,19 7.38,20 6.18,20C5,20 4,19 4,17.82C4,16.62 4.98,15.64 6.18,15.64M4,4.44C12.59,4.44 19.56,11.41 19.56,20H16.73C16.73,12.97 11.03,7.27 4,7.27V4.44M4,10.1C9.47,10.1 13.9,14.53 13.9,20H11.07C11.07,16.1 7.9,12.93 4,12.93V10.1Z" /></svg><span>Recent Changes</span></a></li><li class="sendmail"><a href="#" title="Send via e-Mail" rel="nofollow" class="menuitem sendmail"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="mdi-email-plus" width="24" height="24" viewBox="0 0 24 24"><path d="M3,4C1.89,4 1,4.89 1,6V18C1,19.1 1.9,20 3,20H14.09C14.03,19.67 14,19.34 14,19C14,15.69 16.69,13 20,13C20.34,13 20.67,13.03 21,13.09V6C21,4.89 20.1,4 19,4H3M3,6L11,11L19,6V8L11,13L3,8V6M19,15V18H16V20H19V23H21V20H24V18H21V15H19Z" /></svg><span>Send via e-Mail</span></a></li><li class="printpage"><a href="#" title="Print" rel="nofollow" onclick="javascript:window.print()" class="menuitem printpage"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="mdi-printer" width="24" height="24" viewBox="0 0 24 24"><path d="M18,3H6V7H18M19,12C18.45,12 18,11.55 18,11C18,10.45 18.45,10 19,10C19.55,10 20,10.45 20,11C20,11.55 19.55,12 19,12M16,19H8V14H16M19,8H5C3.34,8 2,9.34 2,11V17H6V21H18V17H22V11C22,9.34 20.66,8 19,8Z" /></svg><span>Print</span></a></li><li class="permalink"><a href="https://wiki.bash-hackers.org/doku.php?id=start&amp;rev=1615330587" title="Permalink" rel="nofollow" target="_blank" class="menuitem permalink"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="mdi-link" width="24" height="24" viewBox="0 0 24 24"><path d="M3.9,12C3.9,10.29 5.29,8.9 7,8.9H11V7H7C4.24,7 2,9.24 2,12C2,14.76 4.24,17 7,17H11V15.1H7C5.29,15.1 3.9,13.71 3.9,12M8,13H16V11H8V13M17,7H13V8.9H17C18.71,8.9 20.1,10.29 20.1,12C20.1,13.71 18.71,15.1 17,15.1H13V17H17C19.76,17 22,14.76 22,12C22,9.24 19.76,7 17,7Z" /></svg><span>Permalink</span></a></li>    </ul>
+</div>
+
+<span class="clearfix"></span>
+
+<!-- /page-icons -->
+
+<div class="help modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title"></h4>
+            </div>
+            <div class="modal-body px-5"></div>
+        </div>
+    </div>
+</div>
+
+
+<div class="dw-content-page "><!-- content --><div class="dw-content"><p>
+<a href="/bash4" class="wikilink1" title="bash4">Bash 4 - a rough overview</a>
+</p>
+
+<h1 class="sectionedit1 page-header pb-3 mb-4 mt-5" id="the_bash_hackers_wiki">The Bash Hackers Wiki</h1>
+<div class="level1">
+<div class="wrap_center wrap_round wrap_box plugin_wrap" style="width: 90%;">
+<p>
+This wiki is intended to hold documentation of any kind about GNU Bash. The main motivation was to provide <em>human-readable documentation</em> and information so users aren&#039;t forced to read every bit of the Bash manpage - which can be difficult to understand. However, the docs here are <strong>not</strong> meant as a newbie tutorial.
+</p>
+
+<p>
+This wiki and any programs found in this wiki are free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+</p>
+
+<p>
+This wiki and its programs are distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+</p>
+
+<p>
+You should have received a copy of the GNU General Public License along with this program.  If not, see &lt;<a href="http://www.gnu.org/licenses/" class="urlextern" title="http://www.gnu.org/licenses/" rel="nofollow">http://www.gnu.org/licenses/</a>&gt;.
+</p>
+
+<p>
+<a href="/wishes" class="wikilink1" title="wishes"> What would YOU like to see here?</a> (outdated and locked, please use the discussions)
+</p>
+
+<p>
+<strong>Stranger!</strong> <a href="http://wiki.bash-hackers.org/start&amp;do=register" class="urlextern" title="http://wiki.bash-hackers.org/start&amp;do=register" rel="nofollow"> Feel free to register</a> and comment or edit the contents. There is a <a href="/meta/need_love" class="wikilink1" title="meta:need_love">Bash Hackers Wiki needs love page</a> that lists some things to do. The registration is only there to prevent SPAM.
+</p>
+</div>
+</div>
+
+<h2 class="sectionedit4 page-header pb-3 mb-4 mt-5" id="scripting_and_general_information">Scripting and general information</h2>
+<div class="level2">
+<ul class=" fix-media-list-overlap">
+<li class="level1"><div class="li"> <a href="/bash4" class="wikilink1" title="bash4"> Bash v4 - a rough overview</a> (unmaintained, since Bash 4 is more or less standard)</div>
+</li>
+<li class="level1"><div class="li"> <a href="/scripting/style" class="wikilink1" title="scripting:style">Scripting with style</a> – an assorted collection of style and optic hints</div>
+</li>
+<li class="level1"><div class="li"> <a href="/scripting/basics" class="wikilink1" title="scripting:basics">The basics of shell scripting</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="/scripting/newbie_traps" class="wikilink1" title="scripting:newbie_traps">Beginner Mistakes</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="/scripting/bashbehaviour" class="wikilink1" title="scripting:bashbehaviour">Bash&#039;s behaviour</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="/scripting/posparams" class="wikilink1" title="scripting:posparams">Handling positional parameters</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="/scripting/processtree" class="wikilink1" title="scripting:processtree">Bash and the process tree</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="/scripting/obsolete" class="wikilink1" title="scripting:obsolete">Obsolete and deprecated syntax</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="/scripting/nonportable" class="wikilink1" title="scripting:nonportable">Portability talk</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="/scripting/debuggingtips" class="wikilink1" title="scripting:debuggingtips">Debugging a script</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="/scripting/terminalcodes" class="wikilink1" title="scripting:terminalcodes">Terminal codes (ANSI/VT100) introduction</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="/scripting/tutoriallist" class="wikilink1" title="scripting:tutoriallist">List of Bash online-tutorials</a></div>
+</li>
+</ul>
+
+</div>
+
+<h2 class="sectionedit5 page-header pb-3 mb-4 mt-5" id="code_snippets">Code snippets</h2>
+<div class="level2">
+
+<p>
+There is a <a href="/snipplets/start" class="wikilink1" title="snipplets:start">section that holds small code snippets</a>.
+</p>
+
+<p>
+See also <a href="/misc/readthesourceluke" class="wikilink1" title="misc:readthesourceluke">some Bash source code excerpts</a>.
+</p>
+
+</div>
+
+<h2 class="sectionedit6 page-header pb-3 mb-4 mt-5" id="how_to">How to....</h2>
+<div class="level2">
+
+<p>
+<a href="/howto/start" class="wikilink1" title="howto:start"> Doing specific tasks: concepts, methods, ideas</a>:
+</p>
+<ul class=" fix-media-list-overlap">
+<li class="level1"><div class="li"> <a href="/howto/mutex" class="wikilink1" title="howto:mutex"> Simple locking (against parallel run)</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="/howto/conffile" class="wikilink1" title="howto:conffile"> Rudimentary config files for your scripts</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="/howto/edit-ed" class="wikilink1" title="howto:edit-ed"> Editing files with ed(1)</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="/howto/collapsing_functions" class="wikilink1" title="howto:collapsing_functions"> Collapsing Functions</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="/howto/redirection_tutorial" class="wikilink1" title="howto:redirection_tutorial"> Illustrated Redirection Tutorial</a> </div>
+</li>
+<li class="level1"><div class="li"> <a href="/howto/calculate-dc" class="wikilink1" title="howto:calculate-dc"> Calculate with dc(1)</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="/howto/pax" class="wikilink1" title="howto:pax"> Introduction to pax - the POSIX archiver</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="/howto/getopts_tutorial" class="wikilink1" title="howto:getopts_tutorial">Small getopts tutorial</a> (<em>under construction!</em>)</div>
+</li>
+<li class="level1"><div class="li"> <a href="/howto/dissectabadoneliner" class="wikilink1" title="howto:dissectabadoneliner">Dissect a bad oneliner</a> An example of a bad oneliner, breakdown and fix (by <code>kojoro</code>)</div>
+</li>
+<li class="level1"><div class="li"> <a href="/howto/testing-your-scripts" class="wikilink1" title="howto:testing-your-scripts"> Write tests for ./your-script.sh</a> by using bashtest util </div>
+</li>
+</ul>
+
+</div>
+
+<h2 class="sectionedit7 page-header pb-3 mb-4 mt-5" id="bash_syntax_and_operations">Bash syntax and operations</h2>
+<div class="level2">
+<ul class=" fix-media-list-overlap">
+<li class="level1"><div class="li"> <a href="/scripting/bashchanges" class="wikilink1" title="scripting:bashchanges"> Bash features overview by version</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="/syntax/basicgrammar" class="wikilink1" title="syntax:basicgrammar"> Basic grammar rules </a></div>
+</li>
+<li class="level1"><div class="li"> <a href="/syntax/quoting" class="wikilink1" title="syntax:quoting"> Quoting and character escaping</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="/syntax/grammar/parser_exec" class="wikilink1" title="syntax:grammar:parser_exec"> Parsing and execution</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="/syntax/words" class="wikilink1" title="syntax:words"> Some words about words...</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="/syntax/pattern" class="wikilink1" title="syntax:pattern"> Patterns and pattern matching</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="/syntax/arith_expr" class="wikilink1" title="syntax:arith_expr"> Arithmetic expressions</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="/internals/shell_options" class="wikilink1" title="internals:shell_options"> List of shell options</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="/syntax/redirection" class="wikilink1" title="syntax:redirection"> Redirection</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="/syntax/shellvars" class="wikilink1" title="syntax:shellvars"> Special parameters and shell variables</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="/syntax/arrays" class="wikilink1" title="syntax:arrays"> Arrays</a></div>
+</li>
+</ul>
+<div class="wrap_column plugin_wrap" style="width: 40%;">
+<p>
+<em><strong><em class="u">Compound commands</em></strong></em>
+</p>
+<div class="table-responsive"><table class="inline table table-striped table-condensed">
+	<thead>
+	<tr class="row0">
+		<th class="col0 leftalign" colspan="2"><strong><a href="/syntax/ccmd/intro" class="wikilink1" title="syntax:ccmd:intro"> Compound commands overview</a></strong>  </th>
+	</tr>
+	<tr class="row1">
+		<th class="col0 leftalign" colspan="2">Grouping  </th>
+	</tr>
+	</thead>
+	<tr class="row2">
+		<td class="col0"><code>{ …; }</code></td><td class="col1"><a href="/syntax/ccmd/grouping_plain" class="wikilink1" title="syntax:ccmd:grouping_plain"> command grouping</a></td>
+	</tr>
+	<tr class="row3">
+		<td class="col0"><code>( … )</code></td><td class="col1"><a href="/syntax/ccmd/grouping_subshell" class="wikilink1" title="syntax:ccmd:grouping_subshell"> command grouping in a subshell</a></td>
+	</tr>
+	<tr class="row4">
+		<th class="col0 leftalign" colspan="2">Conditionals  </th>
+	</tr>
+	<tr class="row5">
+		<td class="col0"><code>[[ ... ]]</code></td><td class="col1"><a href="/syntax/ccmd/conditional_expression" class="wikilink1" title="syntax:ccmd:conditional_expression"> conditional expression</a></td>
+	</tr>
+	<tr class="row6">
+		<td class="col0"><code>if …; then …; fi</code></td><td class="col1"><a href="/syntax/ccmd/if_clause" class="wikilink1" title="syntax:ccmd:if_clause"> conditional branching</a></td>
+	</tr>
+	<tr class="row7">
+		<td class="col0"><code>case … esac</code></td><td class="col1"><a href="/syntax/ccmd/case" class="wikilink1" title="syntax:ccmd:case"> pattern-based branching</a></td>
+	</tr>
+	<tr class="row8">
+		<th class="col0 leftalign" colspan="2">Loops  </th>
+	</tr>
+	<tr class="row9">
+		<td class="col0"><code>for word in …; do …; done</code></td><td class="col1"><a href="/syntax/ccmd/classic_for" class="wikilink1" title="syntax:ccmd:classic_for"> classic for-loop</a></td>
+	</tr>
+	<tr class="row10">
+		<td class="col0"><code>for ((x=1; x&lt;=10; x++)); do ...; done</code></td><td class="col1"><a href="/syntax/ccmd/c_for" class="wikilink1" title="syntax:ccmd:c_for"> C-style for-loop</a></td>
+	</tr>
+	<tr class="row11">
+		<td class="col0"><code>while …; do …; done</code></td><td class="col1"><a href="/syntax/ccmd/while_loop" class="wikilink1" title="syntax:ccmd:while_loop"> while loop</a></td>
+	</tr>
+	<tr class="row12">
+		<td class="col0"><code>until …; do …; done</code></td><td class="col1"><a href="/syntax/ccmd/until_loop" class="wikilink1" title="syntax:ccmd:until_loop"> until loop</a></td>
+	</tr>
+	<tr class="row13">
+		<th class="col0 leftalign" colspan="2">Misc  </th>
+	</tr>
+	<tr class="row14">
+		<td class="col0"><code>(( ... ))</code></td><td class="col1"><a href="/syntax/ccmd/arithmetic_eval" class="wikilink1" title="syntax:ccmd:arithmetic_eval"> arithmetic evaluation</a></td>
+	</tr>
+	<tr class="row15">
+		<td class="col0"><code>select word in …; do …; done</code></td><td class="col1"><a href="/syntax/ccmd/user_select" class="wikilink1" title="syntax:ccmd:user_select"> user selections</a></td>
+	</tr>
+</table></div>
+</div><div class="wrap_column plugin_wrap" style="width: 40%;">
+<p>
+<em><strong><em class="u">Expansions and substitutions</em></strong></em>
+</p>
+<div class="table-responsive"><table class="inline table table-striped table-condensed">
+	<thead>
+	<tr class="row0">
+		<th class="col0 leftalign" colspan="2"><strong><a href="/syntax/expansion/intro" class="wikilink1" title="syntax:expansion:intro"> Introduction to expansions and substitutions</a></strong>  </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0"><code>{A,B,C}    {A..C}</code></td><td class="col1"><a href="/syntax/expansion/brace" class="wikilink1" title="syntax:expansion:brace"> Brace expansion</a></td>
+	</tr>
+	<tr class="row2">
+		<td class="col0"><code>~/    ~root/</code></td><td class="col1"><a href="/syntax/expansion/tilde" class="wikilink1" title="syntax:expansion:tilde"> Tilde expansion</a></td>
+	</tr>
+	<tr class="row3">
+		<td class="col0"><code>$FOO    ${BAR%.mp3}</code></td><td class="col1"><a href="/syntax/pe" class="wikilink1" title="syntax:pe"> Parameter expansion</a></td>
+	</tr>
+	<tr class="row4">
+		<td class="col0"><code>`command`    $(command)</code></td><td class="col1"><a href="/syntax/expansion/cmdsubst" class="wikilink1" title="syntax:expansion:cmdsubst"> Command substitution</a></td>
+	</tr>
+	<tr class="row5">
+		<td class="col0"><code>&lt;(command)    &gt;(command)</code></td><td class="col1"><a href="/syntax/expansion/proc_subst" class="wikilink1" title="syntax:expansion:proc_subst"> Process substitution</a></td>
+	</tr>
+	<tr class="row6">
+		<td class="col0"><code>$((1 + 2 + 3))    $[4 + 5 + 6]</code></td><td class="col1"><a href="/syntax/expansion/arith" class="wikilink1" title="syntax:expansion:arith"> Arithmetic expansion</a></td>
+	</tr>
+	<tr class="row7">
+		<td class="col0"><code>Hello    &lt;---&gt;    Word!</code></td><td class="col1"><a href="/syntax/expansion/wordsplit" class="wikilink1" title="syntax:expansion:wordsplit"> Word splitting</a></td>
+	</tr>
+	<tr class="row8">
+		<td class="col0"><code>/data/*-av/*.mp?</code></td><td class="col1"><a href="/syntax/expansion/globs" class="wikilink1" title="syntax:expansion:globs"> Pathname expansion</a></td>
+	</tr>
+</table></div>
+</div><div class="wrap_clear plugin_wrap"></div>
+</div>
+
+<h2 class="sectionedit16 page-header pb-3 mb-4 mt-5" id="builtin_commands">Builtin Commands</h2>
+<div class="level2">
+
+<p>
+This is a selection of builtin commands and command-like keywords, loosely arranged by their common uses. These are provided directly by the shell, rather than invoked as standalone external commands.
+</p>
+<div class="wrap_column plugin_wrap" style="width: 46%;"><div class="table-responsive"><table class="inline table table-striped table-condensed">
+	<thead>
+	<tr class="row0">
+		<th class="col0 centeralign" colspan="2">  Declaration commands<br/>
+<span class="wrap_center wrap_round wrap_lo wrap_todo wrap_box" style="width: 80%;">Commands that set and query attributes/types, and manipulate simple datastructures.</span>  </th><th class="col2 centeralign">  Alt  </th><th class="col3 centeralign">  Type  </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0"><a href="/commands/builtin/declare" class="wikilink1" title="commands:builtin:declare"> declare</a></td><td class="col1">Display or set shell variables or functions along with attributes.</td><td class="col2 centeralign">  <code>typeset</code>  </td><td class="col3 centeralign">  builtin  </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0"><a href="/commands/builtin/export" class="wikilink1" title="commands:builtin:export"> export</a></td><td class="col1">Display or set shell variables, also giving them the export attribute.</td><td class="col2 centeralign">  <code>typeset -x</code>  </td><td class="col3 centeralign">  special builtin  </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0"><a href="/commands/builtin/eval" class="wikilink1" title="commands:builtin:eval"> eval</a></td><td class="col1">Evaluate arguments as shell code.</td><td class="col2 centeralign">  -  </td><td class="col3 centeralign">  special builtin  </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0"><a href="/commands/builtin/local" class="wikilink1" title="commands:builtin:local"> local</a></td><td class="col1">Declare variables as having function local scope.</td><td class="col2 centeralign">  -  </td><td class="col3 centeralign">  builtin  </td>
+	</tr>
+	<tr class="row5">
+		<td class="col0"><a href="/commands/builtin/readonly" class="wikilink1" title="commands:builtin:readonly"> readonly</a></td><td class="col1">Mark variables or functions as read-only.</td><td class="col2 centeralign">  <code>typeset -r</code>  </td><td class="col3 centeralign">  special builtin  </td>
+	</tr>
+	<tr class="row6">
+		<td class="col0"><a href="/commands/builtin/unset" class="wikilink1" title="commands:builtin:unset"> unset</a></td><td class="col1">Unset variables and functions.</td><td class="col2 centeralign">  -  </td><td class="col3 centeralign">  special builtin  </td>
+	</tr>
+	<tr class="row7">
+		<td class="col0"><a href="/commands/builtin/shift" class="wikilink1" title="commands:builtin:shift"> shift</a></td><td class="col1">Shift positional parameters</td><td class="col2 centeralign">  -  </td><td class="col3 centeralign">  special builtin  </td>
+	</tr>
+	<tr class="row8">
+		<th class="col0 centeralign" colspan="2">  I/O<br/>
+<span class="wrap_center wrap_round wrap_lo wrap_todo wrap_box" style="width: 80%;">Commands for reading/parsing input, or producing/formatting output of standard streams.</span>  </th><th class="col2 centeralign">  Alt  </th><th class="col3 centeralign">  Type  </th>
+	</tr>
+	<tr class="row9">
+		<td class="col0"><a href="/syntax/keywords/coproc" class="wikilink1" title="syntax:keywords:coproc"> coproc</a></td><td class="col1">Co-processes: Run a command in the background with pipes for reading / writing its standard streams.</td><td class="col2 centeralign">  -  </td><td class="col3 centeralign">  keyword  </td>
+	</tr>
+	<tr class="row10">
+		<td class="col0"><a href="/commands/builtin/echo" class="wikilink1" title="commands:builtin:echo"> echo</a></td><td class="col1">Create output from arguments.</td><td class="col2 centeralign">  -  </td><td class="col3 centeralign">  builtin  </td>
+	</tr>
+	<tr class="row11">
+		<td class="col0"><a href="/commands/builtin/mapfile" class="wikilink1" title="commands:builtin:mapfile"> mapfile</a></td><td class="col1">Read lines of input into an array.</td><td class="col2 centeralign">  <code>readarray</code>  </td><td class="col3 centeralign">  builtin  </td>
+	</tr>
+	<tr class="row12">
+		<td class="col0"><a href="/commands/builtin/printf" class="wikilink1" title="commands:builtin:printf"> printf</a></td><td class="col1">&quot;advanced <code>echo</code>.&quot;</td><td class="col2 centeralign">  -  </td><td class="col3 centeralign">  builtin  </td>
+	</tr>
+	<tr class="row13">
+		<td class="col0"><a href="/commands/builtin/read" class="wikilink1" title="commands:builtin:read"> read</a></td><td class="col1">Read input into variables or arrays, or split strings into fields using delimiters.</td><td class="col2 centeralign">  -  </td><td class="col3 centeralign">  builtin  </td>
+	</tr>
+	<tr class="row14">
+		<th class="col0 centeralign" colspan="2">  Configuration and Debugging<br/>
+<span class="wrap_center wrap_round wrap_lo wrap_todo wrap_box" style="width: 80%;">Commands that modify shell behavior, change special options, assist in debugging.</span>  </th><th class="col2 centeralign">  Alt  </th><th class="col3 centeralign">  Type  </th>
+	</tr>
+	<tr class="row15">
+		<td class="col0"><a href="/commands/builtin/caller" class="wikilink1" title="commands:builtin:caller"> caller</a></td><td class="col1">Identify/print execution frames.</td><td class="col2 centeralign">  -  </td><td class="col3 centeralign">  builtin  </td>
+	</tr>
+	<tr class="row16">
+		<td class="col0"><a href="/commands/builtin/set" class="wikilink1" title="commands:builtin:set"> set</a></td><td class="col1">Set the positional parameters and/or set options that affect shell behaviour.</td><td class="col2 centeralign">  -  </td><td class="col3 centeralign">  special builtin  </td>
+	</tr>
+	<tr class="row17">
+		<td class="col0"><a href="/commands/builtin/shopt" class="wikilink1" title="commands:builtin:shopt"> shopt</a></td><td class="col1">set/get some bash-specific shell options.</td><td class="col2 centeralign">  -  </td><td class="col3 centeralign">  builtin  </td>
+	</tr>
+</table></div>
+</div><div class="wrap_column plugin_wrap" style="width: 46%;"><div class="table-responsive"><table class="inline table table-striped table-condensed">
+	<thead>
+	<tr class="row0">
+		<th class="col0 centeralign" colspan="2">  Control flow and data processing<br/>
+<span class="wrap_center wrap_round wrap_lo wrap_todo wrap_box" style="width: 80%;">Commands that operate on data and/or affect control flow.</span>                                                           </th><th class="col2 centeralign">  Alt     </th><th class="col3 centeralign">  Type             </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0 leftalign"> <a href="/commands/builtin/true" class="wikilink2" title="commands:builtin:true" rel="nofollow"> colon</a>                                                                                                         </td><td class="col1 leftalign"> &quot;true&quot; null command.                                    </td><td class="col2 centeralign">  true    </td><td class="col3 centeralign">  special builtin  </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0 leftalign"> <a href="/commands/builtin/source" class="wikilink2" title="commands:builtin:source" rel="nofollow"> dot</a>                                                                                                         </td><td class="col1 leftalign"> Source external files.                                  </td><td class="col2 centeralign">  source  </td><td class="col3 centeralign">  special builtin  </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0 leftalign"> <a href="/commands/builtin/false" class="wikilink2" title="commands:builtin:false" rel="nofollow"> false</a>                                                                                                        </td><td class="col1 leftalign"> Fail at doing nothing.                                  </td><td class="col2 centeralign">  -       </td><td class="col3 centeralign">  builtin          </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0 leftalign"> <a href="/commands/builtin/continuebreak" class="wikilink2" title="commands:builtin:continuebreak" rel="nofollow"> continue / break</a>                                                                                     </td><td class="col1 leftalign"> continue with or break out of loops.                    </td><td class="col2 centeralign">  -       </td><td class="col3 centeralign">  special builtin  </td>
+	</tr>
+	<tr class="row5">
+		<td class="col0 leftalign"> <a href="/commands/builtin/let" class="wikilink1" title="commands:builtin:let"> let</a>                                                                                                            </td><td class="col1 leftalign"> Arithmetic evaluation simple command.                   </td><td class="col2 centeralign">  -       </td><td class="col3 centeralign">  builtin          </td>
+	</tr>
+	<tr class="row6">
+		<td class="col0 leftalign"> <a href="/commands/builtin/return" class="wikilink1" title="commands:builtin:return"> return</a>                                                                                                      </td><td class="col1 leftalign"> Return from a function with a specified exit status.    </td><td class="col2 centeralign">  -       </td><td class="col3 centeralign">  special builtin  </td>
+	</tr>
+	<tr class="row7">
+		<td class="col0 leftalign"> <a href="/commands/classictest" class="wikilink1" title="commands:classictest"> [</a>                                                                                                              </td><td class="col1 leftalign"> The classic <code>test</code> simple command.                    </td><td class="col2 centeralign">  test    </td><td class="col3 centeralign">  builtin          </td>
+	</tr>
+	<tr class="row8">
+		<th class="col0 centeralign" colspan="2">  Process and Job control<br/>
+<span class="wrap_center wrap_round wrap_lo wrap_todo wrap_box" style="width: 80%;">Commands related to jobs, signals, process groups, subshells.</span>                                                                </th><th class="col2 centeralign">  Alt     </th><th class="col3 centeralign">  Type             </th>
+	</tr>
+	<tr class="row9">
+		<td class="col0 leftalign"> <a href="/commands/builtin/exec" class="wikilink1" title="commands:builtin:exec"> exec</a>                                                                                                          </td><td class="col1 leftalign"> Replace the current shell process or set redirections.  </td><td class="col2 centeralign">  -       </td><td class="col3 centeralign">  special builtin  </td>
+	</tr>
+	<tr class="row10">
+		<td class="col0 leftalign"> <a href="/commands/builtin/exit" class="wikilink1" title="commands:builtin:exit"> exit</a>                                                                                                          </td><td class="col1 leftalign"> Exit the shell.                                         </td><td class="col2 centeralign">  -       </td><td class="col3 centeralign">  special builtin  </td>
+	</tr>
+	<tr class="row11">
+		<td class="col0 leftalign"> <a href="/commands/builtin/kill" class="wikilink1" title="commands:builtin:kill"> kill</a>                                                                                                          </td><td class="col1 leftalign"> Send a signal to specified process(es)                  </td><td class="col2 centeralign">  -       </td><td class="col3 leftalign"> builtin           </td>
+	</tr>
+	<tr class="row12">
+		<td class="col0 leftalign"> <a href="/commands/builtin/trap" class="wikilink1" title="commands:builtin:trap"> trap</a>                                                                                                          </td><td class="col1 leftalign"> Set signal handlers or output the current handlers.     </td><td class="col2 centeralign">  -       </td><td class="col3 centeralign">  special builtin  </td>
+	</tr>
+	<tr class="row13">
+		<td class="col0 leftalign"> <a href="/commands/builtin/times" class="wikilink2" title="commands:builtin:times" rel="nofollow"> times</a>                                                                                                        </td><td class="col1 leftalign"> Display process times.                                  </td><td class="col2 centeralign">  -       </td><td class="col3 centeralign">  special builtin  </td>
+	</tr>
+	<tr class="row14">
+		<td class="col0 leftalign"> <a href="/commands/builtin/wait" class="wikilink1" title="commands:builtin:wait"> wait</a>                                                                                                          </td><td class="col1 leftalign"> Wait for background jobs and asynchronous lists.        </td><td class="col2 centeralign">  -       </td><td class="col3 centeralign">  builtin          </td>
+	</tr>
+	<tr class="row15">
+		<th class="col0 leftalign" colspan="2">                                                                                                                                                                                                   </th><th class="col2 centeralign">  Alt     </th><th class="col3 centeralign">  Type             </th>
+	</tr>
+</table></div>
+</div><div class="wrap_clear plugin_wrap"></div><div class="wrap_hide plugin_wrap">
+<p>
+ previous alphabetical version
+</p>
+<div class="wrap_column plugin_wrap" style="width: 40%;"><div class="table-responsive"><table class="inline table table-striped table-condensed">
+	<thead>
+	<tr class="row0">
+		<th class="col0" colspan="2">A-G</th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0"><a href="/commands/builtin/caller" class="wikilink1" title="commands:builtin:caller"> caller</a></td><td class="col1 leftalign">identify/print execution frames (Bash builtin)  </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0"><a href="/syntax/keywords/coproc" class="wikilink1" title="syntax:keywords:coproc"> coproc</a></td><td class="col1">Co-processes (Bash keyword) </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0"><a href="/commands/builtin/declare" class="wikilink1" title="commands:builtin:declare"> declare</a></td><td class="col1 leftalign">display or set shell variables or functions along with attributes (Bash builtin, synonym: <code>typeset</code>)  </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0 leftalign"><a href="/commands/builtin/exec" class="wikilink1" title="commands:builtin:exec"> exec</a>  </td><td class="col1"> replace the shell, set redirections (Bash builtin) </td>
+	</tr>
+	<tr class="row5">
+		<th class="col0" colspan="2">I-N</th>
+	</tr>
+	<tr class="row6">
+		<td class="col0"><a href="/commands/builtin/let" class="wikilink1" title="commands:builtin:let"> let</a></td><td class="col1 leftalign">arithmetic evaluation - an old fashioned way (Bash builtin)  </td>
+	</tr>
+	<tr class="row7">
+		<td class="col0"><a href="/commands/builtin/mapfile" class="wikilink1" title="commands:builtin:mapfile"> mapfile</a></td><td class="col1 leftalign">Mapping lines of input to an array, also named <code>readarray</code> (Bash builtin)  </td>
+	</tr>
+</table></div>
+</div><div class="wrap_column plugin_wrap" style="width: 40%;"><div class="table-responsive"><table class="inline table table-striped table-condensed">
+	<thead>
+	<tr class="row0">
+		<th class="col0" colspan="2">O-T</th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0"><a href="/commands/builtin/printf" class="wikilink1" title="commands:builtin:printf"> printf</a></td><td class="col1 leftalign">&quot;advanced <code>echo</code>&quot; (Bash builtin)  </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0"><a href="/commands/builtin/read" class="wikilink1" title="commands:builtin:read"> read</a></td><td class="col1 leftalign">getting input from <code>stdin</code> (Bash builtin)  </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0"><a href="/commands/builtin/readonly" class="wikilink1" title="commands:builtin:readonly"> readonly</a></td><td class="col1 leftalign">mark variables or functions as read-only (Bash builtin)  </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0"><a href="/commands/builtin/set" class="wikilink1" title="commands:builtin:set"> set</a></td><td class="col1 leftalign">control positional parameters and shell behaviour (Bash builtin)  </td>
+	</tr>
+	<tr class="row5">
+		<td class="col0"><a href="/commands/builtin/shopt" class="wikilink1" title="commands:builtin:shopt"> shopt</a></td><td class="col1 leftalign">set/get shell options (Bash builtin)  </td>
+	</tr>
+	<tr class="row6">
+		<td class="col0"><a href="/commands/classictest" class="wikilink1" title="commands:classictest"> test</a></td><td class="col1 leftalign">the classic <code>test</code> command (Bash builtin)  </td>
+	</tr>
+	<tr class="row7">
+		<th class="col0" colspan="2">U-Z</th>
+	</tr>
+	<tr class="row8">
+		<td class="col0"><a href="/commands/builtin/unset" class="wikilink1" title="commands:builtin:unset"> unset</a></td><td class="col1 leftalign">unset variables and functions (Bash builtin)  </td>
+	</tr>
+</table></div>
+</div><div class="wrap_clear plugin_wrap"></div></div>
+</div>
+
+<h2 class="sectionedit35 page-header pb-3 mb-4 mt-5" id="dictionary">Dictionary</h2>
+<div class="level2">
+<div class="plugin_note notetip">A list of expressions, words, and their meanings is <a href="/dict/index" class="wikilink1" title="dict:index"> here</a>.
+</div>
+</div>
+
+<h2 class="sectionedit36 page-header pb-3 mb-4 mt-5" id="links">Links</h2>
+<div class="level2">
+
+</div>
+
+<h3 class="sectionedit37 page-header pb-3 mb-4 mt-5" id="official_bash_links">Official Bash links</h3>
+<div class="level3">
+<ul class=" fix-media-list-overlap">
+<li class="level1"><div class="li"> <a href="http://tiswww.case.edu/php/chet/bash/bashtop.html" class="urlextern" title="http://tiswww.case.edu/php/chet/bash/bashtop.html" rel="nofollow">Chet Ramey&#039;s Bash page</a> and its <a href="http://tiswww.case.edu/php/chet/bash/FAQ" class="urlextern" title="http://tiswww.case.edu/php/chet/bash/FAQ" rel="nofollow">FAQ</a>.</div>
+</li>
+<li class="level1"><div class="li"> <a href="http://www.gnu.org/software/bash/" class="urlextern" title="http://www.gnu.org/software/bash/" rel="nofollow"> GNU Bash software page</a></div>
+</li>
+<li class="level1 node"><div class="li"> Official Bash mailing lists:</div>
+<ul class=" fix-media-list-overlap">
+<li class="level2"><div class="li"> <strong>Bug reports</strong>: <a href="mailto:&#x62;&#x75;&#x67;&#x2d;&#x62;&#x61;&#x73;&#x68;&#x40;&#x67;&#x6e;&#x75;&#x2e;&#x6f;&#x72;&#x67;" class="mail" title="&#x62;&#x75;&#x67;&#x2d;&#x62;&#x61;&#x73;&#x68;&#x40;&#x67;&#x6e;&#x75;&#x2e;&#x6f;&#x72;&#x67;">&#x62;&#x75;&#x67;&#x2d;&#x62;&#x61;&#x73;&#x68;&#x40;&#x67;&#x6e;&#x75;&#x2e;&#x6f;&#x72;&#x67;</a> (<a href="http://mail.gnu.org/pipermail/bug-bash" class="urlextern" title="http://mail.gnu.org/pipermail/bug-bash" rel="nofollow">archives</a>)</div>
+</li>
+<li class="level2"><div class="li"> <strong>General questions</strong>: <a href="mailto:&#x68;&#x65;&#x6c;&#x70;&#x2d;&#x62;&#x61;&#x73;&#x68;&#x40;&#x67;&#x6e;&#x75;&#x2e;&#x6f;&#x72;&#x67;" class="mail" title="&#x68;&#x65;&#x6c;&#x70;&#x2d;&#x62;&#x61;&#x73;&#x68;&#x40;&#x67;&#x6e;&#x75;&#x2e;&#x6f;&#x72;&#x67;">&#x68;&#x65;&#x6c;&#x70;&#x2d;&#x62;&#x61;&#x73;&#x68;&#x40;&#x67;&#x6e;&#x75;&#x2e;&#x6f;&#x72;&#x67;</a> (<a href="http://mail.gnu.org/pipermail/help-bash" class="urlextern" title="http://mail.gnu.org/pipermail/help-bash" rel="nofollow">archives</a>)</div>
+</li>
+</ul>
+</li>
+<li class="level1 node"><div class="li"> Official Bash git repository:</div>
+<ul class=" fix-media-list-overlap">
+<li class="level2"><div class="li"> <strong>Browse</strong>: <a href="http://git.savannah.gnu.org/cgit/bash.git" class="urlextern" title="http://git.savannah.gnu.org/cgit/bash.git" rel="nofollow"> cgit</a></div>
+</li>
+<li class="level2"><div class="li"> <strong>Clone</strong>: <em>git:</em> ssh://git.sv.gnu.org/srv/git/bash.git • <em>ssh:</em> ssh://git.sv.gnu.org/srv/git/bash.git • <em>http:</em> http://git.savannah.gnu.org/r/bash.git</div>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+<h3 class="sectionedit38 page-header pb-3 mb-4 mt-5" id="recommended_shell_resources">Recommended Shell resources</h3>
+<div class="level3">
+<ul class=" fix-media-list-overlap">
+<li class="level1 node"><div class="li"> <a href="http://mywiki.wooledge.org/" class="urlextern" title="http://mywiki.wooledge.org/" rel="nofollow"> Greg&#039;s wiki</a> - Greg Wooledge&#039;s (aka &quot;greycat&quot;) wiki – with <strong>MASSIVE</strong> information about Bash and UNIX® in general.</div>
+<ul class=" fix-media-list-overlap">
+<li class="level2"><div class="li"> <a href="http://mywiki.wooledge.org/BashFAQ" class="urlextern" title="http://mywiki.wooledge.org/BashFAQ" rel="nofollow"> BashFAQ</a> • <a href="http://mywiki.wooledge.org/BashGuide" class="urlextern" title="http://mywiki.wooledge.org/BashGuide" rel="nofollow"> BashGuide</a> • <a href="http://mywiki.wooledge.org/BashPitfalls" class="urlextern" title="http://mywiki.wooledge.org/BashPitfalls" rel="nofollow"> BashPitfalls</a> • <a href="http://mywiki.wooledge.org/BashSheet" class="urlextern" title="http://mywiki.wooledge.org/BashSheet" rel="nofollow"> BashSheet</a></div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> <a href="http://www.in-ulm.de/~mascheck/" class="urlextern" title="http://www.in-ulm.de/~mascheck/" rel="nofollow"> Sven Mascheck&#039;s pages</a> - A goldmine of information. A must-read.</div>
+</li>
+<li class="level1"><div class="li"> <a href="https://www.mirbsd.org/ksh-chan.htm" class="urlextern" title="https://www.mirbsd.org/ksh-chan.htm" rel="nofollow"> #ksh channel page</a> - #ksh Freenode channel page maintains a solid collection of recommended links.</div>
+</li>
+<li class="level1"><div class="li"> <a href="http://www.grymoire.com/Unix/" class="urlextern" title="http://www.grymoire.com/Unix/" rel="nofollow"> The Grymoire Unix pages</a> - Good scripting information, especially read the <a href="http://www.grymoire.com/Unix/Quote.html" class="urlextern" title="http://www.grymoire.com/Unix/Quote.html" rel="nofollow"> quoting</a> guide.</div>
+</li>
+<li class="level1"><div class="li"> <a href="http://www.shelldorado.com" class="urlextern" title="http://www.shelldorado.com" rel="nofollow"> Heiner&#039;s &quot;Shell Dorado&quot;</a> - Tips, tricks, links - for every situation.</div>
+</li>
+<li class="level1"><div class="li"> <a href="http://pubs.opengroup.org/onlinepubs/9699919799/" class="urlextern" title="http://pubs.opengroup.org/onlinepubs/9699919799/" rel="nofollow"> The Single Unix Specification (version 4, aka POSIX-2008)</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="http://www.opengroup.org/austin/" class="urlextern" title="http://www.opengroup.org/austin/" rel="nofollow"> The Austin Group</a> - <a href="http://dir.gmane.org/gmane.comp.standards.posix.austin.general" class="urlextern" title="http://dir.gmane.org/gmane.comp.standards.posix.austin.general" rel="nofollow"> List archives </a>, <a href="http://austingroupbugs.net/main_page.php" class="urlextern" title="http://austingroupbugs.net/main_page.php" rel="nofollow"> Bug tracker </a></div>
+</li>
+<li class="level1"><div class="li"> <a href="http://cfajohnson.com/shell/cus-faq.html" class="urlextern" title="http://cfajohnson.com/shell/cus-faq.html" rel="nofollow"> comp.unix.shell FAQ</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://tldp.org/LDP/abs/html/index.html" class="urlextern" title="https://tldp.org/LDP/abs/html/index.html" rel="nofollow"> Advanced Bash-Scripting Guide</a> - last update: 10 Mar 2014, but still very useful guide.</div>
+</li>
+</ul>
+
+</div>
+
+<h4 id="documentationreference">Documentation / Reference</h4>
+<div class="level4">
+<ul class=" fix-media-list-overlap">
+<li class="level1"><div class="li"> <strong>Bash</strong>: <a href="http://tiswww.case.edu/php/chet/bash/bash.html" class="urlextern" title="http://tiswww.case.edu/php/chet/bash/bash.html" rel="nofollow"> man page</a> <a href="http://tiswww.case.edu/php/chet/bash/bashref.html" class="urlextern" title="http://tiswww.case.edu/php/chet/bash/bashref.html" rel="nofollow"> info page</a></div>
+</li>
+<li class="level1"><div class="li"> <strong>AT&amp;T ksh</strong>: <a href="http://www2.research.att.com/sw/download/man/man1/ksh88.html" class="urlextern" title="http://www2.research.att.com/sw/download/man/man1/ksh88.html" rel="nofollow"> ksh88</a> <a href="http://www2.research.att.com/sw/download/man/man1/ksh.html" class="urlextern" title="http://www2.research.att.com/sw/download/man/man1/ksh.html" rel="nofollow"> ksh93</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://www.mirbsd.org/htman/i386/man1/mksh.htm" class="urlextern" title="https://www.mirbsd.org/htman/i386/man1/mksh.htm" rel="nofollow"> mksh</a> (pdksh successor) </div>
+</li>
+<li class="level1"><div class="li"> <a href="http://zsh.sourceforge.net/Doc/" class="urlextern" title="http://zsh.sourceforge.net/Doc/" rel="nofollow"> zsh</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="http://man7.org/linux/man-pages/man1/dash.1.html" class="urlextern" title="http://man7.org/linux/man-pages/man1/dash.1.html" rel="nofollow"> dash</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="http://heirloom.sourceforge.net/man/sh.1.html" class="urlextern" title="http://heirloom.sourceforge.net/man/sh.1.html" rel="nofollow"> Heirloom Bourne shell</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="http://v6shell.org/man/osh.1.html" class="urlextern" title="http://v6shell.org/man/osh.1.html" rel="nofollow"> Thompson shell</a></div>
+</li>
+</ul>
+
+</div>
+
+<h3 class="sectionedit39 page-header pb-3 mb-4 mt-5" id="assorted_interesting_links">Assorted interesting links</h3>
+<div class="level3">
+<ul class=" fix-media-list-overlap">
+<li class="level1"><div class="li"> <a href="http://www.in-ulm.de/~mascheck/bourne/" class="urlextern" title="http://www.in-ulm.de/~mascheck/bourne/" rel="nofollow"> History and development of the traditional Bourne shell family</a> - very interesting and nice to read!</div>
+</li>
+<li class="level1"><div class="li"> <a href="http://www.computerworld.com.au/article/222764/-z_programming_languages_bash_bourne-again_shell" class="urlextern" title="http://www.computerworld.com.au/article/222764/-z_programming_languages_bash_bourne-again_shell" rel="nofollow"> Interview with Chet Ramey</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="http://www.computerworld.com.au/article/279011/a-z_programming_languages_sh" class="urlextern" title="http://www.computerworld.com.au/article/279011/a-z_programming_languages_sh" rel="nofollow"> Interview with Steve Bourne</a> • <a href="https://www.youtube.com/watch?v=2kEJoWfobpA" class="urlextern" title="https://www.youtube.com/watch?v=2kEJoWfobpA" rel="nofollow"> Stephen Bourne - BSDCan 2015 keynote</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="http://news.slashdot.org/story/01/02/06/2030205/david-korn-tells-all" class="urlextern" title="http://news.slashdot.org/story/01/02/06/2030205/david-korn-tells-all" rel="nofollow"> Interview with David Korn</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://www.youtube.com/watch?v=bKzonnwoR2I" class="urlextern" title="https://www.youtube.com/watch?v=bKzonnwoR2I" rel="nofollow"> Kernighan on the Unix pipeline (computerphile video)</a></div>
+</li>
+<li class="level1"><div class="li"> Linux in general, with some shell related stuff: <a href="http://www.cyberciti.biz/" class="urlextern" title="http://www.cyberciti.biz/" rel="nofollow"> nixCraft: Linux Tips, Hacks, Tutorials and Ideas</a></div>
+</li>
+<li class="level1"><div class="li"> Linux tutorials, guides and how-tos: <a href="https://www.rosehosting.com/blog/" class="urlextern" title="https://www.rosehosting.com/blog/" rel="nofollow"> RoseHosting Blog</a>, <a href="https://www.rosehosting.com/blog/script-install-wordpress-on-a-debianubuntu-vps/" class="urlextern" title="https://www.rosehosting.com/blog/script-install-wordpress-on-a-debianubuntu-vps/" rel="nofollow"> bash script for installing WordPress</a> and some <a href="https://www.rosehosting.com/blog/basic-shell-commands-after-putty-ssh-logon/" class="urlextern" title="https://www.rosehosting.com/blog/basic-shell-commands-after-putty-ssh-logon/" rel="nofollow"> basic shell commands</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="/misc/bashphorisms" class="wikilink1" title="misc:bashphorisms"> Bashphorism list from the Bash IRC channel on Freenode</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="/misc/shell_humor" class="wikilink1" title="misc:shell_humor"> Some more or less funny commandline stuff</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://thishosting.rocks/how-to-enable-ssh-on-ubuntu/" class="urlextern" title="https://thishosting.rocks/how-to-enable-ssh-on-ubuntu/" rel="nofollow"> How to Enable SSH on Ubuntu Tutorial</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://linuxstans.com/how-to-make-an-awesome-custom-shell-with-zsh/" class="urlextern" title="https://linuxstans.com/how-to-make-an-awesome-custom-shell-with-zsh/" rel="nofollow"> How To Make an Awesome Custom Shell with ZSH</a></div>
+</li>
+</ul>
+
+</div>
+
+<h3 class="sectionedit40 page-header pb-3 mb-4 mt-5" id="bash_libraries_needs_review">Bash Libraries (needs review)</h3>
+<div class="level3">
+<ul class=" fix-media-list-overlap">
+<li class="level1"><div class="li"> <a href="http://sourceforge.net/projects/oobash/" class="urlextern" title="http://sourceforge.net/projects/oobash/" rel="nofollow"> An oo-style bash library for bash 4</a> - provides tools for rapid script development and huge libraries.</div>
+</li>
+<li class="level1"><div class="li"> <a href="https://github.com/hornos/shf3" class="urlextern" title="https://github.com/hornos/shf3" rel="nofollow"> General purpose shell framework for bash 4</a> - in development.</div>
+</li>
+<li class="level1"><div class="li"> <a href="https://github.com/chilicuil/learn/blob/master/sh/lib" class="urlextern" title="https://github.com/chilicuil/learn/blob/master/sh/lib" rel="nofollow"> General purpose bash library for bash 4</a> - active development</div>
+</li>
+</ul>
+<div class="wrap_hide plugin_wrap">
+<h2 class="sectionedit43 page-header pb-3 mb-4 mt-5" id="most_wanted">Most wanted</h2>
+<div class="table-responsive"><table class="inline table table-striped table-condensed">
+	<thead>
+	<tr class="row0">
+		<th class="col0" colspan="3">Statistics for Month: <strong>April 2012</strong></th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0 leftalign">Rank  </td><td class="col1 centeralign">  Views  </td><td class="col2 centeralign">  Article  </td>
+	</tr>
+	<tr class="row2">
+		<th class="col0 leftalign">1   </th><td class="col1 rightalign">  6833</td><td class="col2"><a href="/howto/getopts_tutorial" class="wikilink1" title="howto:getopts_tutorial">Small getopts tutorial</a> (March: 11663) </td>
+	</tr>
+	<tr class="row3">
+		<th class="col0 leftalign">2   </th><td class="col1 rightalign">  4025</td><td class="col2 leftalign"><a href="/commands/builtin/printf" class="wikilink1" title="commands:builtin:printf">The printf command</a> (March: 7079)  </td>
+	</tr>
+	<tr class="row4">
+		<th class="col0 leftalign">3   </th><td class="col1 rightalign">  2861</td><td class="col2 leftalign"><a href="/syntax/quoting" class="wikilink1" title="syntax:quoting">Quotes and escaping</a> (March: 5730)  </td>
+	</tr>
+	<tr class="row5">
+		<th class="col0 leftalign">4   </th><td class="col1 rightalign">  2854</td><td class="col2 leftalign"><a href="/commands/classictest" class="wikilink1" title="commands:classictest">The classic test command</a> (March: 6145)  </td>
+	</tr>
+	<tr class="row6">
+		<th class="col0 leftalign">5   </th><td class="col1 rightalign">  2222</td><td class="col2 leftalign"><a href="/syntax/pe" class="wikilink1" title="syntax:pe">Parameter expansion</a> (March: 4540)  </td>
+	</tr>
+	<tr class="row7">
+		<th class="col0 leftalign">6   </th><td class="col1 rightalign">  1760</td><td class="col2 leftalign"><a href="/scripting/posparams" class="wikilink1" title="scripting:posparams">Handling positional parameters</a> (March: 3591)  </td>
+	</tr>
+	<tr class="row8">
+		<th class="col0 leftalign">7   </th><td class="col1 rightalign">  1249</td><td class="col2 leftalign"><a href="/bash4" class="wikilink1" title="bash4">Bash 4 - a rough overview</a> (March: –)  </td>
+	</tr>
+	<tr class="row9">
+		<th class="col0 leftalign">8   </th><td class="col1 rightalign">  1212</td><td class="col2 leftalign"><a href="/howto/edit-ed" class="wikilink1" title="howto:edit-ed">Editing files via scripts with ed</a> (March: 2727)  </td>
+	</tr>
+	<tr class="row10">
+		<th class="col0 leftalign">9   </th><td class="col1 rightalign">  1205</td><td class="col2 leftalign"><a href="/commands/builtin/read" class="wikilink1" title="commands:builtin:read">The read builtin command</a> (March: –)  </td>
+	</tr>
+	<tr class="row11">
+		<th class="col0 leftalign">10  </th><td class="col1 rightalign">  1182</td><td class="col2 leftalign"><a href="/howto/mutex" class="wikilink1" title="howto:mutex">Lock your script (against parallel execution)</a> (March: –)  </td>
+	</tr>
+</table></div>
+<ul class=" fix-media-list-overlap">
+<li class="level1"><div class="li"> &quot;Total visits&quot;: 35144</div>
+</li>
+<li class="level1"><div class="li"> The overall &quot;start&quot; page is not counted</div>
+</li>
+</ul>
+</div>
+</div>
+
+<h2 class="sectionedit45 page-header pb-3 mb-4 mt-5" id="contact">Contact</h2>
+<div class="level2">
+<div class="wrap_column plugin_wrap" style="width: 40%;">
+<p>
+Visit us in <code>irc.freenode.net</code>, channel <code>#bash</code> <img src="/lib/images/smileys/icon_wink.gif" class="icon" alt=";-)" />
+</p>
+
+<p>
+If you have critiques or suggestions, please feel free to send a mail using the contact form on the right. Note that there is a simple discussion option below every article.
+</p>
+
+<p>
+Please also see the <a href="/user/thebonsai/imprint" class="wikilink1" title="user:thebonsai:imprint"> imprint</a> if you have problems with the site and its contents (legality, …)!
+</p>
+
+<p>
+It also would be nice to drop a line when
+</p>
+<ul class=" fix-media-list-overlap">
+<li class="level1"><div class="li"> it helped you</div>
+</li>
+<li class="level1"><div class="li"> it didn&#039;t help you (something missing / unclear)</div>
+</li>
+<li class="level1"><div class="li"> you like it</div>
+</li>
+<li class="level1"><div class="li"> you don&#039;t like it</div>
+</li>
+<li class="level1"><div class="li"> you found mistakes / bugs</div>
+</li>
+</ul>
+
+<p>
+Simply: Reader&#039;s feedback
+</p>
+</div><div class="wrap_column plugin_wrap" style="width: 40%;"><div class="level2"><form action="/doku.php" method="post" onsubmit="return validatecontact(this);" class=" form-inline"><table class="inline table table-striped table-condensed"><tr><td>Your Name : </td><td><input type="text" name="name" value="" class=" form-control" /></td></tr><tr><td>Your Email : </td><td><input type="text" name="email" value="" class=" form-control" /></td></tr><tr><td>Message : </td><td><textarea name="content" wrap="on" cols="40" rows="6" value="" class=" form-control" ></textarea></td></tr><tr><td>Enter 'HUMAN' : </td><td><input type="text" name="verify" value="" class=" form-control" /></td></tr></table><p><input type="hidden" name="subject" value="Wiki reader feedback" /><input type="hidden" name="do" value="show" /><input type="hidden" name="id" value="start" /><input type="hidden" name="purge" value="true" /><input type="hidden" name="contact"   value="true" /><input type="submit" name="submit" value="Submit" class=" btn btn-default" /></p></form></div></div><div class="wrap_clear plugin_wrap"></div>
+</div>
+<div class="cookielaw-banner cookielaw-bottom">This website uses cookies for visitor traffic analysis. By using the website, you agree with storing the cookies on your computer.<button>OK</button><a href="https://www.google.com/intl/en/policies/technologies/cookies/" target="_blank">More information</a></div>
+</div><!-- /content --></div>
+                    </div>
+                </div>
+
+                <div class="small text-right">
+
+                                        <span class="docInfo">
+                        <ul class="list-inline"><li><span class="iconify text-muted"  data-icon="mdi:file-document-outline"></span> <span title="start.txt">start.txt</span></li><li><span class="iconify text-muted"  data-icon="mdi:calendar"></span> Last modified: <span title="2021/03/09 22:56">2021/03/09 22:56</span></li><li class="text-muted">by <bdi>shigvia</bdi></li></ul>                    </span>
+                    
+                    
+                </div>
+
+            </article>
+
+            
+        </div>
+
+    </main>
+
+    <footer id="dw__footer" class="dw-container py-5 dokuwiki container-fluid">
+        <hr/>
+<div align="center">
+<h3><a target="_blank" href="http://www.performing-databases.com">This site is supported by Performing Databases - your experts for database administration</a></h3>
+</div>
+<hr/>
+<div align="center">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- BHORG_BOTTOM -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-4658830517838678"
+     data-ad-slot="1603598940"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<!-- footer -->
+<div class="dw-container small container-fluid mx-5">
+
+    
+    <div class="footer-dw-title">
+                <div class="media">
+            <div class="media-left">
+                <img src="/lib/tpl/bootstrap3/images/logo.png" alt="Bash Hackers Wiki" class="media-object" style="height:32px" />
+            </div>
+            <div class="media-body">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <h4 class="media-heading">Bash Hackers Wiki</h4>
+                        <p>
+                                                    </p>
+                    </div>
+                    <div class="col-sm-10">
+                                            </div>
+                </div>
+            </div>
+        </div>
+                    </div>
+
+    <div class="footer-license row">
+        <hr/>
+        <div id="dw__license" class="col-sm-6">
+                        <p>
+                <a href="http://www.gnu.org/licenses/fdl-1.3.html" title="GNU Free Documentation License 1.3" target="" itemscope itemtype="http://schema.org/CreativeWork" itemprop="license" rel="license" class="license"><img src="/lib/tpl/bootstrap3/images/license/gnufdl.png" width="24" height="24" alt="gnufdl" /> </a>            </p>
+            <p class="small">
+                Except where otherwise noted, content on this wiki is licensed under the following license:<br/><a href="http://www.gnu.org/licenses/fdl-1.3.html" title="GNU Free Documentation License 1.3" target="" itemscope itemtype="http://schema.org/CreativeWork" itemprop="license" rel="license" class="license">GNU Free Documentation License 1.3</a>            </p>
+                    </div>
+
+        <div class="col-sm-6">
+                    </div>
+
+    </div>
+
+</div>
+<!-- /footer -->
+    </footer>
+
+    <a href="#dokuwiki__top" class="back-to-top hidden-print btn btn-default" title="skip to content" accesskey="t">
+        <span class="iconify"  data-icon="mdi:chevron-up"></span>    </a>
+
+    <div id="screen__mode">        <span class="visible-xs-block"></span>
+        <span class="visible-sm-block"></span>
+        <span class="visible-md-block"></span>
+        <span class="visible-lg-block"></span>
+    </div>
+
+    <img src="/lib/exe/indexer.php?id=start&amp;1638417024" width="2" height="1" alt="" />
+</div>
+
+</body>
+</html>
